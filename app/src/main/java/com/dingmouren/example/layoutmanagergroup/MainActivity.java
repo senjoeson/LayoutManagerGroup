@@ -103,6 +103,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_5:
                 startActivity(new Intent(MainActivity.this, ViewPagerLayoutManagerActivity.class));
                 break;
+            case R.id.item_6:
+                startActivity(new Intent(MainActivity.this,LinearSnapHelperActivity.class));
+                break;
 
         }
         return super.onOptionsItemSelected(item);

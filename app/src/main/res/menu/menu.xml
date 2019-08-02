@@ -25,4 +25,8 @@
         android:title="ViewPagerLayoutManager"
         app:showAsAction="never"
         />
+    <item android:id="@+id/item_6"
+          android:title="自定义测试"
+          app:showAsAction="never"
+        />
 </menu>

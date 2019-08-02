@@ -39,6 +39,7 @@
             android:theme="@style/AppTheme.Skid_1"
             >
         </activity>
+        <activity android:name=".LinearSnapHelperActivity"/>
     </application>
 
 </manifest>

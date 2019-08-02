@@ -85,7 +85,7 @@ public class EchelonLayoutManager extends RecyclerView.LayoutManager {
                 info.setTop((int) (remainSpace + maxOffset));
                 info.setPositionOffset(0);
                 info.setLayoutPercent(info.getTop() / getVerticalSpace());
-                info.setScaleXY((float) Math.pow(mScale, j - 1)); ;
+                info.setScaleXY((float) Math.pow(mScale, j - 1));
                 break;
             }
         }

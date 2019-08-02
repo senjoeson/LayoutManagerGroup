@@ -1,20 +1,16 @@
 package com.dingmouren.example.layoutmanagergroup.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.dingmouren.example.layoutmanagergroup.MyApplication;
 import com.dingmouren.example.layoutmanagergroup.R;
 import com.dingmouren.example.layoutmanagergroup.widget.InterceptRelativeLayout;
@@ -22,8 +18,6 @@ import com.dingmouren.layoutmanagergroup.banner.BannerLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.dingmouren.example.layoutmanagergroup.R.drawable.circle_red;
 
 public class BannerActivity extends AppCompatActivity {
     private static final String TAG = "BannerActivity";
@@ -100,13 +94,13 @@ public class BannerActivity extends AppCompatActivity {
         };
 
         @Override
-        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(MyApplication.sContext).inflate(R.layout.item_banner, parent, false);
             return new ViewHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(final ViewHolder holder, final int position) {
+        public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
             holder.img.setImageResource(imgs[position % 4]);
         }
 
